@@ -1,0 +1,914 @@
+<!--
+  Этот файл содержит пример использования основных тегов HTML5.
+  Инструкции:
+  1. Сохраните этот код в файл с расширением .html (например, index.html).
+  2. Откройте файл в любом современном браузере (Chrome, Firefox, Edge, Safari и т.д.).
+-->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Основные теги HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .subheading {
+            font-size: 1.5em;
+            margin-top: -10px;
+            color: #555;
+            text-align: center;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            font-size: 90%;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            vertical-align: top;
+            text-align: left;
+            width: 25%;
+            word-wrap: break-word;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        a {
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Основные теги HTML5</h1>
+    <h2 class="subheading"><a href="https://urban-university.ru" target="_blank" rel="noopener noreferrer">Urban-University.ru</a></h2>
+
+    <!-- Базовые теги -->
+    <h2>Базовые теги</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>Объявляет тип документа HTML5.</td>
+            <td><code>&lt;!DOCTYPE html&gt;</code></td>
+            <td>Не отображается</td>
+        </tr>
+        <tr>
+            <td><code>&lt;html&gt;...&lt;/html&gt;</code></td>
+            <td>Корневой элемент HTML-документа.</td>
+            <td>
+<pre><code>&lt;html lang="ru"&gt;
+  &lt;head&gt;...&lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+            </td>
+            <td>Не отображается</td>
+        </tr>
+        <tr>
+            <td><code>&lt;head&gt;...&lt;/head&gt;</code></td>
+            <td>Содержит метаданные документа.</td>
+            <td>
+<pre><code>&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Моя страница&lt;/title&gt;
+&lt;/head&gt;
+</code></pre>
+            </td>
+            <td>Не отображается</td>
+        </tr>
+        <tr>
+            <td><code>&lt;body&gt;...&lt;/body&gt;</code></td>
+            <td>Содержит видимое содержимое документа.</td>
+            <td>
+<pre><code>&lt;body&gt;
+  &lt;h1&gt;Заголовок&lt;/h1&gt;
+  &lt;p&gt;Текст страницы.&lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+            </td>
+            <td>
+                <h1>Заголовок</h1>
+                <p>Текст страницы.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><code>&lt;meta&gt;</code></td>
+            <td>Метаданные документа, например, кодировка.</td>
+            <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+            <td>Не отображается</td>
+        </tr>
+        <tr>
+            <td><code>&lt;title&gt;...&lt;/title&gt;</code></td>
+            <td>Заголовок страницы в браузере.</td>
+            <td><code>&lt;title&gt;Моя страница&lt;/title&gt;</code></td>
+            <td>Отображается на вкладке браузера</td>
+        </tr>
+    </table>
+
+    <!-- Семантические теги HTML5 -->
+    <h2>Семантические теги HTML5</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- header -->
+        <tr>
+            <td><code>&lt;header&gt;...&lt;/header&gt;</code></td>
+            <td>Секция для шапки сайта или раздела.</td>
+            <td>
+<pre><code>&lt;header&gt;
+  &lt;h1&gt;Название сайта&lt;/h1&gt;
+  &lt;nav&gt;...&lt;/nav&gt;
+&lt;/header&gt;
+</code></pre>
+            </td>
+            <td>
+                <header>
+                    <h1>Название сайта</h1>
+                    <nav>
+                        <!-- Навигация -->
+                    </nav>
+                </header>
+            </td>
+        </tr>
+        <!-- nav -->
+        <tr>
+            <td><code>&lt;nav&gt;...&lt;/nav&gt;</code></td>
+            <td>Секция с навигационными ссылками.</td>
+            <td>
+<pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Главная&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Контакты&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+</code></pre>
+            </td>
+            <td>
+                <nav>
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+        <!-- main -->
+        <tr>
+            <td><code>&lt;main&gt;...&lt;/main&gt;</code></td>
+            <td>Основное содержимое страницы.</td>
+            <td>
+<pre><code>&lt;main&gt;
+  &lt;article&gt;...&lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+            </td>
+            <td>
+                <main>
+                    <article>
+                        <!-- Статья -->
+                    </article>
+                </main>
+            </td>
+        </tr>
+        <!-- section -->
+        <tr>
+            <td><code>&lt;section&gt;...&lt;/section&gt;</code></td>
+            <td>Раздел документа или группы контента.</td>
+            <td>
+<pre><code>&lt;section&gt;
+  &lt;h2&gt;Раздел&lt;/h2&gt;
+  &lt;p&gt;Содержимое раздела.&lt;/p&gt;
+&lt;/section&gt;
+</code></pre>
+            </td>
+            <td>
+                <section>
+                    <h2>Раздел</h2>
+                    <p>Содержимое раздела.</p>
+                </section>
+            </td>
+        </tr>
+        <!-- article -->
+        <tr>
+            <td><code>&lt;article&gt;...&lt;/article&gt;</code></td>
+            <td>Самостоятельный элемент контента.</td>
+            <td>
+<pre><code>&lt;article&gt;
+  &lt;h2&gt;Статья&lt;/h2&gt;
+  &lt;p&gt;Текст статьи.&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+            </td>
+            <td>
+                <article>
+                    <h2>Статья</h2>
+                    <p>Текст статьи.</p>
+                </article>
+            </td>
+        </tr>
+        <!-- aside -->
+        <tr>
+            <td><code>&lt;aside&gt;...&lt;/aside&gt;</code></td>
+            <td>Содержит контент, связанный с основным контентом.</td>
+            <td>
+<pre><code>&lt;aside&gt;
+  &lt;p&gt;Боковая информация.&lt;/p&gt;
+&lt;/aside&gt;
+</code></pre>
+            </td>
+            <td>
+                <aside>
+                    <p>Боковая информация.</p>
+                </aside>
+            </td>
+        </tr>
+        <!-- footer -->
+        <tr>
+            <td><code>&lt;footer&gt;...&lt;/footer&gt;</code></td>
+            <td>Секция для нижней части сайта или раздела.</td>
+            <td>
+<pre><code>&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 Компания&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+            </td>
+            <td>
+                <footer>
+                    <p>&copy; 2024 Компания</p>
+                </footer>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Форматирование текста -->
+    <h2>Форматирование текста</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- h1-h6 -->
+        <tr>
+            <td><code>&lt;h1&gt;...&lt;/h1&gt;</code></td>
+            <td>Заголовок 1 уровня.</td>
+            <td><code>&lt;h1&gt;Заголовок 1&lt;/h1&gt;</code></td>
+            <td><h1>Заголовок 1</h1></td>
+        </tr>
+        <tr>
+            <td><code>&lt;h2&gt;...&lt;/h2&gt;</code></td>
+            <td>Заголовок 2 уровня.</td>
+            <td><code>&lt;h2&gt;Заголовок 2&lt;/h2&gt;</code></td>
+            <td><h2>Заголовок 2</h2></td>
+        </tr>
+        <!-- p -->
+        <tr>
+            <td><code>&lt;p&gt;...&lt;/p&gt;</code></td>
+            <td>Абзац текста.</td>
+            <td><code>&lt;p&gt;Текст абзаца.&lt;/p&gt;</code></td>
+            <td><p>Текст абзаца.</p></td>
+        </tr>
+        <!-- br -->
+        <tr>
+            <td><code>&lt;br&gt;</code></td>
+            <td>Разрыв строки.</td>
+            <td><code>Строка 1.&lt;br&gt;Строка 2.</code></td>
+            <td>Строка 1.<br>Строка 2.</td>
+        </tr>
+        <!-- strong -->
+        <tr>
+            <td><code>&lt;strong&gt;...&lt;/strong&gt;</code></td>
+            <td>Выделение текста полужирным.</td>
+            <td><code>&lt;strong&gt;Важный текст&lt;/strong&gt;</code></td>
+            <td><strong>Важный текст</strong></td>
+        </tr>
+        <!-- em -->
+        <tr>
+            <td><code>&lt;em&gt;...&lt;/em&gt;</code></td>
+            <td>Выделение текста курсивом.</td>
+            <td><code>&lt;em&gt;Курсивный текст&lt;/em&gt;</code></td>
+            <td><em>Курсивный текст</em></td>
+        </tr>
+        <!-- span -->
+        <tr>
+            <td><code>&lt;span&gt;...&lt;/span&gt;</code></td>
+            <td>Инлайновый контейнер.</td>
+            <td><code>&lt;span style="color:blue;"&gt;Синий текст&lt;/span&gt;</code></td>
+            <td><span style="color:blue;">Синий текст</span></td>
+        </tr>
+        <!-- blockquote -->
+        <tr>
+            <td><code>&lt;blockquote&gt;...&lt;/blockquote&gt;</code></td>
+            <td>Блочная цитата.</td>
+            <td>
+<pre><code>&lt;blockquote&gt;
+  &lt;p&gt;Текст цитаты.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre>
+            </td>
+            <td>
+                <blockquote>
+                    <p>Текст цитаты.</p>
+                </blockquote>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Списки -->
+    <h2>Списки</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- ul -->
+        <tr>
+            <td><code>&lt;ul&gt;...&lt;/ul&gt;</code></td>
+            <td>Ненумерованный список.</td>
+            <td>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;Элемент 1&lt;/li&gt;
+  &lt;li&gt;Элемент 2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+            </td>
+            <td>
+                <ul>
+                    <li>Элемент 1</li>
+                    <li>Элемент 2</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- ol -->
+        <tr>
+            <td><code>&lt;ol&gt;...&lt;/ol&gt;</code></td>
+            <td>Нумерованный список.</td>
+            <td>
+<pre><code>&lt;ol&gt;
+  &lt;li&gt;Элемент 1&lt;/li&gt;
+  &lt;li&gt;Элемент 2&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+            </td>
+            <td>
+                <ol>
+                    <li>Элемент 1</li>
+                    <li>Элемент 2</li>
+                </ol>
+            </td>
+        </tr>
+        <!-- li -->
+        <tr>
+            <td><code>&lt;li&gt;...&lt;/li&gt;</code></td>
+            <td>Элемент списка.</td>
+            <td><code>&lt;li&gt;Пункт списка&lt;/li&gt;</code></td>
+            <td>
+                <ul>
+                    <li>Пункт списка</li>
+                </ul>
+            </td>
+        </tr>
+        <!-- dl -->
+        <tr>
+            <td><code>&lt;dl&gt;...&lt;/dl&gt;</code></td>
+            <td>Список определений.</td>
+            <td>
+<pre><code>&lt;dl&gt;
+  &lt;dt&gt;Термин&lt;/dt&gt;
+  &lt;dd&gt;Определение&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+            </td>
+            <td>
+                <dl>
+                    <dt>Термин</dt>
+                    <dd>Определение</dd>
+                </dl>
+            </td>
+        </tr>
+        <!-- dt -->
+        <tr>
+            <td><code>&lt;dt&gt;...&lt;/dt&gt;</code></td>
+            <td>Термин в списке определений.</td>
+            <td><code>&lt;dt&gt;Термин&lt;/dt&gt;</code></td>
+            <td>
+                <dl>
+                    <dt>Термин</dt>
+                </dl>
+            </td>
+        </tr>
+        <!-- dd -->
+        <tr>
+            <td><code>&lt;dd&gt;...&lt;/dd&gt;</code></td>
+            <td>Определение термина.</td>
+            <td><code>&lt;dd&gt;Определение&lt;/dd&gt;</code></td>
+            <td>
+                <dl>
+                    <dd>Определение</dd>
+                </dl>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Гиперссылки и якоря -->
+    <h2>Гиперссылки и якоря</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- a href -->
+        <tr>
+            <td><code>&lt;a href="URL"&gt;...&lt;/a&gt;</code></td>
+            <td>Создает гиперссылку.</td>
+            <td><code>&lt;a href="https://urban-university.ru"&gt;Ссылка&lt;/a&gt;</code></td>
+            <td><a href="https://urban-university.ru">Ссылка</a></td>
+        </tr>
+        <!-- a href="#" -->
+        <tr>
+            <td><code>&lt;a href="#id"&gt;...&lt;/a&gt;</code></td>
+            <td>Ссылка на якорь внутри страницы.</td>
+            <td>
+<pre><code>&lt;a href="#section1"&gt;Перейти к разделу&lt;/a&gt;
+...
+&lt;h2 id="section1"&gt;Раздел&lt;/h2&gt;
+</code></pre>
+            </td>
+            <td>
+                <a href="#section1">Перейти к разделу</a>
+                <!-- Раздел с id="section1" -->
+            </td>
+        </tr>
+        <!-- link -->
+        <tr>
+            <td><code>&lt;link&gt;</code></td>
+            <td>Связывает документ с внешним ресурсом.</td>
+            <td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td>
+            <td>Не отображается</td>
+        </tr>
+    </table>
+
+    <!-- Изображения и мультимедиа -->
+    <h2>Изображения и мультимедиа</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- img -->
+        <tr>
+            <td><code>&lt;img src="URL" alt="текст"&gt;</code></td>
+            <td>Вставляет изображение.</td>
+            <td><code>&lt;img src="image.jpg" alt="Описание"&gt;</code></td>
+            <td>
+                <img src="https://via.placeholder.com/150" alt="Описание">
+            </td>
+        </tr>
+        <!-- audio -->
+        <tr>
+            <td><code>&lt;audio&gt;...&lt;/audio&gt;</code></td>
+            <td>Воспроизведение аудио.</td>
+            <td>
+<pre><code>&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  Ваш браузер не поддерживает аудио.
+&lt;/audio&gt;
+</code></pre>
+            </td>
+            <td>
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает аудио.
+                </audio>
+            </td>
+        </tr>
+        <!-- video -->
+        <tr>
+            <td><code>&lt;video&gt;...&lt;/video&gt;</code></td>
+            <td>Воспроизведение видео.</td>
+            <td>
+<pre><code>&lt;video controls&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Ваш браузер не поддерживает видео.
+&lt;/video&gt;
+</code></pre>
+            </td>
+            <td>
+                <video controls width="200">
+                    <source src="video.mp4" type="video/mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </td>
+        </tr>
+        <!-- iframe -->
+        <tr>
+            <td><code>&lt;iframe&gt;...&lt;/iframe&gt;</code></td>
+            <td>Встраивает содержимое из другого источника.</td>
+            <td><code>&lt;iframe src="https://urban-university.ru"&gt;&lt;/iframe&gt;</code></td>
+            <td>
+                <iframe src="https://urban-university.ru" width="200" height="100"></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Работа с формами -->
+    <h2>Работа с формами</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- form -->
+        <tr>
+            <td><code>&lt;form&gt;...&lt;/form&gt;</code></td>
+            <td>Контейнер для элементов формы.</td>
+            <td>
+<pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;input type="text" name="username"&gt;
+&lt;/form&gt;
+</code></pre>
+            </td>
+            <td>
+                <form action="/submit" method="post">
+                    <input type="text" name="username" placeholder="Ваше имя">
+                </form>
+            </td>
+        </tr>
+        <!-- input -->
+        <tr>
+            <td><code>&lt;input&gt;</code></td>
+            <td>Поле ввода данных.</td>
+            <td><code>&lt;input type="email" name="email"&gt;</code></td>
+            <td>
+                <input type="email" name="email" placeholder="Ваш email">
+            </td>
+        </tr>
+        <!-- label -->
+        <tr>
+            <td><code>&lt;label&gt;...&lt;/label&gt;</code></td>
+            <td>Метка для элемента формы.</td>
+            <td><code>&lt;label for="email"&gt;Email:&lt;/label&gt;</code></td>
+            <td>
+                <label for="email">Email:</label>
+            </td>
+        </tr>
+        <!-- textarea -->
+        <tr>
+            <td><code>&lt;textarea&gt;...&lt;/textarea&gt;</code></td>
+            <td>Многострочное поле ввода.</td>
+            <td><code>&lt;textarea name="message"&gt;&lt;/textarea&gt;</code></td>
+            <td>
+                <textarea name="message" rows="2" cols="20"></textarea>
+            </td>
+        </tr>
+        <!-- button -->
+        <tr>
+            <td><code>&lt;button&gt;...&lt;/button&gt;</code></td>
+            <td>Кнопка действия.</td>
+            <td><code>&lt;button type="submit"&gt;Отправить&lt;/button&gt;</code></td>
+            <td>
+                <button type="submit">Отправить</button>
+            </td>
+        </tr>
+        <!-- select -->
+        <tr>
+            <td><code>&lt;select&gt;...&lt;/select&gt;</code></td>
+            <td>Выпадающий список.</td>
+            <td>
+<pre><code>&lt;select name="country"&gt;
+  &lt;option value="ru"&gt;Россия&lt;/option&gt;
+  &lt;option value="us"&gt;США&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+            </td>
+            <td>
+                <select name="country">
+                    <option value="ru">Россия</option>
+                    <option value="us">США</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Теги для работы с таблицами -->
+    <h2>Теги для работы с таблицами</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- table -->
+        <tr>
+            <td><code>&lt;table&gt;...&lt;/table&gt;</code></td>
+            <td>Создает таблицу.</td>
+            <td>
+<pre><code>&lt;table&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+            </td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>Ячейка</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- tr -->
+        <tr>
+            <td><code>&lt;tr&gt;...&lt;/tr&gt;</code></td>
+            <td>Строка таблицы.</td>
+            <td>
+<pre><code>&lt;tr&gt;
+  &lt;td&gt;Ячейка 1&lt;/td&gt;
+  &lt;td&gt;Ячейка 2&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+            </td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>Ячейка 1</td>
+                        <td>Ячейка 2</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- td -->
+        <tr>
+            <td><code>&lt;td&gt;...&lt;/td&gt;</code></td>
+            <td>Ячейка таблицы.</td>
+            <td><code>&lt;td&gt;Данные&lt;/td&gt;</code></td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <td>Данные</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- th -->
+        <tr>
+            <td><code>&lt;th&gt;...&lt;/th&gt;</code></td>
+            <td>Заголовочная ячейка таблицы.</td>
+            <td><code>&lt;th&gt;Заголовок&lt;/th&gt;</code></td>
+            <td>
+                <table border="1">
+                    <tr>
+                        <th>Заголовок</th>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!-- thead -->
+        <tr>
+            <td><code>&lt;thead&gt;...&lt;/thead&gt;</code></td>
+            <td>Заголовок таблицы.</td>
+            <td>
+<pre><code>&lt;thead&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+&lt;/thead&gt;
+</code></pre>
+            </td>
+            <td>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Заголовок</th>
+                        </tr>
+                    </thead>
+                </table>
+            </td>
+        </tr>
+        <!-- tbody -->
+        <tr>
+            <td><code>&lt;tbody&gt;...&lt;/tbody&gt;</code></td>
+            <td>Тело таблицы.</td>
+            <td>
+<pre><code>&lt;tbody&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+&lt;/tbody&gt;
+</code></pre>
+            </td>
+            <td>
+                <table border="1">
+                    <tbody>
+                        <tr>
+                            <td>Данные</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <!-- tfoot -->
+        <tr>
+            <td><code>&lt;tfoot&gt;...&lt;/tfoot&gt;</code></td>
+            <td>Подвал таблицы.</td>
+            <td>
+<pre><code>&lt;tfoot&gt;
+  &lt;tr&gt;...&lt;/tr&gt;
+&lt;/tfoot&gt;
+</code></pre>
+            </td>
+            <td>
+                <table border="1">
+                    <tfoot>
+                        <tr>
+                            <td>Итого</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Другие полезные теги -->
+    <h2>Другие полезные теги</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- div -->
+        <tr>
+            <td><code>&lt;div&gt;...&lt;/div&gt;</code></td>
+            <td>Блочный контейнер для группировки контента.</td>
+            <td>
+<pre><code>&lt;div class="box"&gt;
+  &lt;p&gt;Текст внутри div.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+            </td>
+            <td>
+                <div class="box">
+                    <p>Текст внутри div.</p>
+                </div>
+            </td>
+        </tr>
+        <!-- mark -->
+        <tr>
+            <td><code>&lt;mark&gt;...&lt;/mark&gt;</code></td>
+            <td>Выделение текста.</td>
+            <td><code>&lt;mark&gt;Выделенный текст&lt;/mark&gt;</code></td>
+            <td>
+                <p>Это <mark>выделенный текст</mark> внутри предложения.</p>
+            </td>
+        </tr>
+        <!-- code -->
+        <tr>
+            <td><code>&lt;code&gt;...&lt;/code&gt;</code></td>
+            <td>Отображает текст в стиле кода.</td>
+            <td><code>&lt;code&gt;let x = 10;&lt;/code&gt;</code></td>
+            <td>
+                <p>Пример кода: <code>let x = 10;</code></p>
+            </td>
+        </tr>
+        <!-- pre -->
+        <tr>
+            <td><code>&lt;pre&gt;...&lt;/pre&gt;</code></td>
+            <td>Предварительно отформатированный текст.</td>
+            <td>
+<pre><code>&lt;pre&gt;
+Текст с
+сохранением пробелов
+и переносов строк.
+&lt;/pre&gt;
+</code></pre>
+            </td>
+            <td>
+                <pre>
+Текст с
+сохранением пробелов
+и переносов строк.
+                </pre>
+            </td>
+        </tr>
+        <!-- hr -->
+        <tr>
+            <td><code>&lt;hr&gt;</code></td>
+            <td>Горизонтальная линия-разделитель.</td>
+            <td><code>&lt;hr&gt;</code></td>
+            <td><hr></td>
+        </tr>
+    </table>
+
+    <!-- Дополнительные теги -->
+    <h2>Дополнительные теги</h2>
+    <table>
+        <tr>
+            <th>Тег</th>
+            <th>Описание</th>
+            <th>Пример</th>
+            <th>Результат</th>
+        </tr>
+        <!-- abbr -->
+        <tr>
+            <td><code>&lt;abbr&gt;...&lt;/abbr&gt;</code></td>
+            <td>Аббревиатура с расшифровкой.</td>
+            <td><code>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</code></td>
+            <td>
+                В тексте: <abbr title="HyperText Markup Language">HTML</abbr>
+            </td>
+        </tr>
+        <!-- address -->
+        <tr>
+            <td><code>&lt;address&gt;...&lt;/address&gt;</code></td>
+            <td>Контактная информация.</td>
+            <td>
+<pre><code>&lt;address&gt;
+  &lt;strong&gt;Компания&lt;/strong&gt;&lt;br&gt;
+  ул. Победы, д.196&lt;br&gt;
+  г. Москва, Россия&lt;br&gt;
+  Email: info@example.com
+&lt;/address&gt;
+</code></pre>
+            </td>
+            <td>
+                <address>
+                    <strong>Компания</strong><br>
+                    ул. Победы, д.196<br>
+                    г. Москва, Россия<br>
+                    Email: info@example.com
+                </address>
+            </td>
+        </tr>
+        <!-- cite -->
+        <tr>
+            <td><code>&lt;cite&gt;...&lt;/cite&gt;</code></td>
+            <td>Заголовок работы, цитата.</td>
+            <td><code>&lt;cite&gt;Название книги&lt;/cite&gt;</code></td>
+            <td>
+                <p>Я прочитал <cite>«Критика чистого разума»</cite> и был впечатлен.</p>
+            </td>
+        </tr>
+        <!-- time -->
+        <tr>
+            <td><code>&lt;time&gt;...&lt;/time&gt;</code></td>
+            <td>Дата или время.</td>
+            <td><code>&lt;time datetime="2024-06-14"&gt;14 июня 2024&lt;/time&gt;</code></td>
+            <td>
+                <p>Событие состоится <time datetime="2024-06-14">14 июня 2024</time>.</p>
+            </td>
+        </tr>
+    </table>
+<footer>
+  <p>
+    <a href="https://github.com/vovparya" target="_blank">
+      <img src="https://github.com/favicon.ico" alt="GitHub" style="width:20px;">
+    </a>
+  </p>
+</footer>
+</body>
+</html>
